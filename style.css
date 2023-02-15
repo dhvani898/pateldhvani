@@ -233,12 +233,11 @@
     font-weight: 400;
     margin-left: 1rem;
     color: var(--text-color);
-   
   }
 
-  /* .information .info-box span:hover {
+  .information .info-box span:hover {
     color: var(--hover);
-  } */
+  }
 /*Project*/
 
 .grid{
