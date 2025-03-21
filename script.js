@@ -40,14 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const darkmode = document.getElementById("darkmode");
+// const darkmode = document.getElementById("darkmode");
 
-darkmode.onclick = () => {
-  document.body.classList.toggle("dark");
+// darkmode.onclick = () => {
+//   document.body.classList.toggle("dark");
   
-  darkmode.classList.toggle("bx-sun");
-  darkmode.classList.toggle("bx-moon");
-};
+//   darkmode.classList.toggle("bx-sun");
+//   darkmode.classList.toggle("bx-moon");
+// };
 
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
