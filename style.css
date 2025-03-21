@@ -61,26 +61,29 @@
   .typing-animation {
     font-size: 3rem;
     font-weight: bold;
-    border-right: 2px solid #22cf91; 
-    white-space: nowrap;
+    /* color: #22cf91; */
     overflow: hidden;
+    border-right: 4px solid #22cf91; 
+    white-space: nowrap;
     width: 0;
-    animation: typing 2s steps(12, end) forwards, blink 0.7s steps(2, start) infinite;
+    animation: typing 2s steps(14, end) forwards, blink 0.6s infinite;
   }
-  
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 65%; }
-  }
-  
-  @keyframes blink {
-    50% { border-color: transparent; }
-  }
-  
-  .typing-animation.done {
-    border-right: none; 
-  }
-  
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 85% }
+    }
+
+    @keyframes blink {
+        50% { border-color: transparent }
+    }
+
+    @media (max-width: 768px) {
+        .typing-animation {
+            font-size: 2rem;
+            border-right: 2px solid #22cf91;
+        }
+    }
   
   .heading {
     text-align: center;
@@ -927,7 +930,7 @@ form textarea {
       background: var(--bg-color);
     }
  
-    .#darkmode {
+    #darkmode {
       position: absolute;
       top: 1.4rem;
       right: 2rem;
