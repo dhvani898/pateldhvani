@@ -12,3 +12,48 @@ menu.onclick = () => {
 window.onscroll = () => {
   navbar.classList.remove("active");
 };
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hiddenSections = document.querySelectorAll(".hidden");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+
+              
+              const lines = entry.target.querySelectorAll(".line-hidden");
+              lines.forEach((line, index) => {
+                  setTimeout(() => {
+                      line.classList.add("line-show");
+                  }, index * 200); 
+              });
+
+              observer.unobserve(entry.target); 
+          }
+      });
+  }, { threshold: 0.2 });
+
+  hiddenSections.forEach(section => {
+      observer.observe(section);
+  });
+});
+
+const darkmode = document.getElementById("darkmode");
+
+darkmode.onclick = () => {
+  document.body.classList.toggle("dark");
+  
+  darkmode.classList.toggle("bx-sun");
+  darkmode.classList.toggle("bx-moon");
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.querySelector(".typing-animation").classList.add("done");
+  }, 2000); 
+});
+
+
+
