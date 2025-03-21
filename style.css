@@ -1048,3 +1048,11 @@ form textarea {
 }
 
 
+@media (max-width: 768px) {
+    .certification-box.flip .flip-card {
+        transform: rotateY(180deg);
+    }
+}
+
+
+
