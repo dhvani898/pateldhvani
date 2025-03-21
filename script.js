@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
               lines.forEach((line, index) => {
                   setTimeout(() => {
                       line.classList.add("line-show");
-                  }, index * 200); 
+                  }, index * 100); 
               });
 
               observer.unobserve(entry.target); 
