@@ -55,5 +55,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 2000); 
 });
 
+const certificationBoxes = document.querySelectorAll(".certification-box");
+
+certificationBoxes.forEach(box => {
+    box.addEventListener("click", function () {
+        this.classList.toggle("flip");
+    });
+});
+
 
 
