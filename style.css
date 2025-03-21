@@ -1041,3 +1041,10 @@ form textarea {
     }
 }
 
+@media (max-width: 768px) {
+    .certification-box {
+        pointer-events: auto !important;
+    }
+}
+
+
